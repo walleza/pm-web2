@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<separator />
+	<groupbox width="100%" height="90%" style="background: linear-gradient(black, #58ACFA);">
+		<image src="/images/xikweneti.png" width="25%"/>
+	</groupbox>
+</zk>

@@ -1,0 +1,79 @@
+<window id="menuWindow" apply="walleza.controller.main.MainController"
+	border="none" width="100%" height="100%">
+
+	<panel>
+		<panelchildren sclass="scrollable" style="padding:10px;">
+			<div align="center"
+				style="background: linear-gradient(black, #58ACFA);  border-radius: 25px 300px 1px 200px">
+				<image src="images/gm.jpg" width="50%" height="30%"
+					style="border-radius:50px" />
+			</div>
+
+			<div height="20px">
+				<space />
+				<grid>
+					<columns>
+						<column label="Menu" align="center"
+							style="background: linear-gradient(#58ACFA, black); color:yellow;" />
+					</columns>
+					<rows>
+						<row></row>
+					</rows>
+				</grid>
+			</div>
+
+			<separator height="50px" />
+
+			<tabbox id="tb" width="100%" mold="accordion">
+				<tabs>
+					<tab label="${labels.menu.agenda}" />
+					<tab label="${labels.menu.expense}" />
+					<tab label="${labels.menu.reports }" />
+					<tab label="${labels.global.system }" />
+					<tab id="tabExit" label="${labels.menu.out }" />
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem id="menuNewAgenda"
+								label="${labels.menu.maintain.agenda}" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem id="menuMaintainExpense"
+								label="${labels.menu.maintain.expense}" />
+							<menuitem id="menuCheckList"
+								label="${labels.menu.check.list }" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem id="menuPieChart"
+								label="${labels.menu.report.pie.chart}" />
+							<menuitem id="menuEfetiveVsPending"
+								label="${labels.menu.report.bar.chart }" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem id="menuChangePass"
+								label="${labels.menu.system.change.pass }" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel />
+				</tabpanels>
+			</tabbox>
+
+		</panelchildren>
+	</panel>
+
+</window>

@@ -1,0 +1,3 @@
+<window width="100%" title="Sessão Expirada" border="normal">
+	<vbox>A sua sessão expirou devido ao tempo de espera.</vbox>
+</window>

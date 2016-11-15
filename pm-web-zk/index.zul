@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?link rel="stylesheet" href="/css/standard.css"?>
+
+<borderlayout apply="walleza.controller.login.LogInController">
+
+	<center flex="true">
+		<panel>
+			<panelchildren sclass="body_contents">
+				<borderlayout style="border:none;">
+
+					<north style="border:none;" height="15%">
+						<include src="/header.zul" />
+					</north>
+
+					<center style="border:none;">
+						<include id="bodyContents" src="/login.zul" />
+					</center>
+
+				</borderlayout>
+			</panelchildren>
+		</panel>
+	</center>
+
+	<west size="270px" minsize="270" maxsize="500" flex="true"
+		splittable="true" collapsible="true">
+		<include id="shortcut" />
+	</west>
+
+	<south size="70px" flex="true" splittable="true"
+		collapsible="true">
+		<include src="/footer.zul" />
+	</south>
+</borderlayout>

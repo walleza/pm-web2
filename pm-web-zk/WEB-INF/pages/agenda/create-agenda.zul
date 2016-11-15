@@ -1,0 +1,55 @@
+<window id="createAgendaWindow"
+	apply="walleza.controller.agenda.CreateAgendaController" border="none"
+	height="100%">
+
+	<separator height="14px" />
+
+	<groupbox mold="3d">
+
+		<caption label="${labels.global.add.agenda }" />
+
+		<vlayout>
+			<grid sclass="dataGridForm">
+				<columns>
+					<column width="20%" />
+					<column width="70%" />
+					<column width="20%" />
+					<column width="30%" />
+					<column />
+				</columns>
+				<rows>
+					<row>
+						<label value="${labels.global.designation}" />
+						<textbox id="txbDesignation" maxlength="100"
+							constraint="no empty" width="300px" />
+						<button id="btDown" image="images/down.png" />
+					</row>
+				</rows>
+			</grid>
+
+			<separator />
+
+			<listbox id="lbAgenda" mold="paging" pageSize="6">
+				<listhead>
+					<listheader label="${labels.global.isDefault}"
+						width="10%" />
+					<listheader label="${labels.global.designation}"
+						sort="auto" />
+				</listhead>
+			</listbox>
+
+			<separator />
+
+			<hlayout>
+				<button id="btSave" label="${labels.global.save }" />
+				<button id="btEdit" label="${labels.global.edit }" />
+				<button id="btDefault"
+					label="${labels.global.set.defaultAgenda }" />
+				<button id="btDelete" label="${labels.global.delete }" />
+			</hlayout>
+
+		</vlayout>
+
+	</groupbox>
+
+</window>

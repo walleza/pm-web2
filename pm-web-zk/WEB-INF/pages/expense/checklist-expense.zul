@@ -1,0 +1,67 @@
+<window id="checkExpenseWindow"
+	apply="walleza.controller.expense.CheckListExpensecontroller"
+	border="none" height="100%">
+
+	<separator height="14px" />
+
+	<groupbox mold="3d">
+
+		<caption label="${labels.menu.check.list }" />
+
+		<separator />
+
+		<grid width="100%">
+			<columns>
+				<column width="10%" />
+				<column />
+			</columns>
+			<rows>
+				<row>
+					<label value="${labels.menu.agenda}" />
+					<combobox id="cbAgenda" width="500px"
+						readonly="true" />
+				</row>
+
+				<row>
+					<label value="${labels.global.show }" />
+					<combobox id="cbFilter" readonly="true" width="10%" />
+				</row>
+
+			</rows>
+		</grid>
+
+		<separator />
+
+		<vlayout>
+			<listbox id="lbExpense" mold="paging" pageSize="6">
+				<listhead>
+					<listheader label="${labels.global.designation}"
+						sort="auto" />
+					<listheader label="${labels.global.created.date}"
+						width="30%" />
+					<listheader label="${labels.global.value}"
+						width="40%" style="text-align: right" />
+				</listhead>
+			</listbox>
+		</vlayout>
+
+		<separator />
+
+		<groupbox>
+
+			<div style="text-align: right;">
+				<label id="lbTotal" value="0.00"
+					style="font-weight:bold;color:#58ACFA;font-size:12pt" />
+			</div>
+
+		</groupbox>
+
+		<separator />
+
+		<hlayout>
+			<button id="btMarkAs" label="${labels.global.mark.as } " />
+		</hlayout>
+
+	</groupbox>
+
+</window>

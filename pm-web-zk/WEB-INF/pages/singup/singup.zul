@@ -1,0 +1,85 @@
+<window id="singupWindow"
+	apply="walleza.controller.singup.SingUpController" border="none"
+	height="100%">
+
+	<separator height="14px" />
+
+	<groupbox mold="3d">
+		<caption label="${labels.global.singup }" />
+
+		<vlayout>
+			<grid sclass="dataGridForm">
+				<columns>
+					<column width="20%" />
+					<column />
+				</columns>
+				<rows>
+					<row>
+						<label value="${labels.global.full.name}" />
+						<textbox id="txbFullName" width="80%" />
+					</row>
+
+					<row>
+						<label value="${labels.global.email}" />
+						<textbox id="txbEmail" width="50%" />
+					</row>
+
+					<row>
+						<label value="${labels.global.phone.number}" />
+						<textbox id="txbPhone" maxlength="15" />
+					</row>
+
+					<row>
+						<label value="${labels.global.acess.name}" />
+						<textbox id="txbNickName" width="40%" />
+					</row>
+
+					<row>
+						<label value="${labels.global.password.$}" />
+						<textbox id="txbPassword" width="30%"
+							type="password" />
+					</row>
+
+					<row>
+						<label
+							value="${labels.global.password.confirm}" />
+						<textbox id="txbPasswordConfirm" width="30%"
+							type="password" />
+					</row>
+
+				</rows>
+			</grid>
+
+			<separator />
+
+			<vlayout>
+
+				<grid sclass="dataGridForm">
+					<columns>
+						<column width="12%" />
+						<column width="8%" />
+						<column width="5%" />
+						<column />
+					</columns>
+					<rows>
+						<row>
+							<label value="${labels.global.captcha }" />
+							<image id="imageCaptcha" />
+							<button id="btRefresh"
+								image="/images/refresh.png" />
+							<textbox id="txbCaptcha" maxlength="5" />
+						</row>
+					</rows>
+				</grid>
+
+			</vlayout>
+
+			<hlayout>
+				<button id="btSave" label="${labels.global.register }" />
+				<button id="btClean"
+					label="${labels.global.clean.fields}" />
+			</hlayout>
+
+		</vlayout>
+	</groupbox>
+</window>

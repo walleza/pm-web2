@@ -1,0 +1,111 @@
+<window id="shortcutWindow"
+	apply="walleza.controller.main.MainController" border="none"
+	width="100%" height="100%">
+
+	<panel>
+		<panelchildren sclass="scrollable" style="padding:10px;">
+			<div align="center">
+				<image src="images/GM.jpeg" width="50%" height="30%" />
+			</div>
+
+			<div height="20px">
+				<space />
+				<grid>
+					<columns>
+						<column label="Menu" align="center" />
+					</columns>
+					<rows>
+						<row></row>
+					</rows>
+				</grid>
+			</div>
+
+			<separator height="50px" />
+
+			<tabbox id="tb" width="100%" mold="accordion">
+				<tabs>
+					<tab label="${labels.menu.agenda}" />
+					<tab label="${labels.menu.expense}" />
+					<tab label="${labels.menu.reports }" />
+					<tab label="${labels.global.system }" />
+					<tab label="${labels.menu.out }" />
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem label="${labels.global.addNew}" />
+							<menuitem label="${labels.global.delete}" />
+							<menuitem
+								label="${labels.menu.check.list }" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem label="${labels.global.addNew}" />
+							<menuitem label="${labels.global.edit}" />
+							<menuitem label="${labels.global.view }" />
+							<menuitem label="${labels.global.delete}" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem
+								label="${labels.menu.report.pie.chart}" />
+							<menuitem
+								label="${labels.menu.report.bar.chart }" />
+							<menuitem
+								label="${labels.menu.report.line.chart }" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel>
+
+						<menubar orient="vertical" autodrop="true">
+							<menuitem
+								label="${labels.menu.system.share.agenda }" />
+							<menuitem
+								label="${labels.menu.system.acept.agenda }" />
+						</menubar>
+
+					</tabpanel>
+					<tabpanel />
+				</tabpanels>
+			</tabbox>
+
+			<div height="20px">
+				<space />
+				<grid>
+					<columns>
+						<column label="${labels.glocal.my.shortcuts}"
+							align="center" />
+					</columns>
+					<rows>
+						<row></row>
+					</rows>
+				</grid>
+			</div>
+			<div height="400px">
+				<space />
+				<space />
+				<fisheyebar id="fsb"
+					style="position:absolute; margin:5px 40px;" attachEdge="top"
+					itemWidth="40" itemHeight="40" itemMaxHeight="80"
+					itemMaxWidth="80">
+					<fisheye id="scHome" label="Home"
+						image="images/sc-home.png" />
+					<fisheye id="scRfunc" label=""
+						image="images/folder.png" />
+					<fisheye label="Busca" image="images/SEO.png" />
+					<fisheye id="scFindFun" label=""
+						image="images/sc-list.png" />
+				</fisheyebar>
+			</div>
+		</panelchildren>
+	</panel>
+
+</window>

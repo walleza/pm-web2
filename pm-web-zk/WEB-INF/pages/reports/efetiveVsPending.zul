@@ -1,0 +1,51 @@
+<window id="pieWindow"
+	apply="walleza.controller.reports.EfectiveVspendingController"
+	border="none" height="100%">
+
+	<groupbox mold="3d">
+
+		<caption
+			label="${labels.global.report } - ${labels.global.efetive.vs.pending }" />
+
+		<vlayout>
+			<grid sclass="dataGridForm">
+				<columns>
+					<column width="20%" />
+					<column />
+				</columns>
+				<rows>
+
+					<row>
+						<label value="${labels.menu.agenda}" />
+						<combobox id="cbAgenda" width="500px"
+							readonly="true" />
+					</row>
+
+					<row>
+						<label value="${labels.global.time.interval }" />
+						<hlayout>
+							<datebox id="dateBegin" format="short"
+								constraint="no future" />
+							<datebox id="dateEnd" format="short"
+								constraint="no future" />
+						</hlayout>
+					</row>
+
+				</rows>
+			</grid>
+
+			<button id="btExecute" label="${labels.global.generate }" />
+
+			<separator />
+
+			<groupbox mold="3d" height="400px">
+
+				<caption label="${labels.global.report } " />
+
+				<iframe id="iframe" width="100%" height="100%" />
+
+			</groupbox>
+		</vlayout>
+	</groupbox>
+
+</window>
